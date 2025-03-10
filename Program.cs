@@ -1,54 +1,100 @@
 ﻿using System;
-using System.Numerics;
 
-class MinMaxComparison
+namespace Operators_Fulton_Christoper
 {
-    static void Main()
+    internal class Program
     {
-        // Integer type
-        int num1 = -3, num2 = 53;
-        int product = num1 * num2;
-        int sum = num1 + num2;
-        FindMinMaxAndCompare(num1, num2);
+        static void Main(string[] args)
+        {
+            // Intitializes an integer that multiplies two integers
+            int intMult = 6 * 45;
+            // Intitialized an integer that adds integers
+            int intAdd = 55 + 66;
 
-        // Short type
-        short short1 = -300, short2 = 5000;
-        short shortProduct = (short)(short1 * short2);
-        short shortSum = (short)(short1 + short2);
-        FindMinMaxAndCompare(short1, short2);
+            // Prints the maxium and minimum of the two integer variables
+            Console.WriteLine($"The max of {intMult} and {intAdd} is {Math.Max(intMult, intAdd)}." +
+                $"The min of the two is {Math.Min(intMult, intAdd)}");
+            
+            // Intitializes boolean to see if intMult is grater than intAdd 
+            bool isintGreater = intMult > intAdd;
+            // Prints if intMult is greater than intAdd
+            Console.WriteLine($"{intMult} is greater than {intAdd}, {isintGreater}.");
 
-        // Long type
-        long long1 = -123456789L, long2 = 987654321L;
-        long longProduct = long1 * long2;
-        long longSum = long1 + long2;
-        FindMinMaxAndCompare(long1, long2);
 
-        // Float type
-        float float1 = -3.14f, float2 = 2.718f;
-        float floatProduct = float1 * float2;
-        float floatSum = float1 + float2;
-        FindMinMaxAndCompare(float1, float2);
+            // Intitializes an short that multiplies two shorts
+            short shortMult = 6 * 45;
+            // Intitialized an short that adds shorts
+            short shortAdd = 55 + 66;
 
-        // Double type
-        double double1 = -123.456, double2 = 789.123;
-        double doubleProduct = double1 * double2;
-        double doubleSum = double1 + double2;
-        FindMinMaxAndCompare(double1, double2);
+            // Prints the maxium and minimum of the two short variables
+            Console.WriteLine($"The max of {shortMult} and {shortAdd} is {Math.Max(shortMult, shortAdd)}." +
+                $"The min of the two is {Math.Min(shortMult, shortAdd)}");
 
-        // Decimal type
-        decimal decimal1 = -98765.4321m, decimal2 = 12345.6789m;
-        decimal decimalProduct = decimal1 * decimal2;
-        decimal decimalSum = decimal1 + decimal2;
-        FindMinMaxAndCompare(decimal1, decimal2);
-    }
+            // Intitializes boolean to see if shortMult is grater than shortAdd 
+            bool isshortGreater = shortMult > shortAdd;
+            // Prints if shortMult is greater than shortAdd
+            Console.WriteLine($"{shortMult} is greater than {shortAdd}, {isshortGreater}.");
 
-    static void FindMinMaxAndCompare<T>(T a, T b) where T : IComparable<T>
-    {
-        T min = (a.CompareTo(b) < 0) ? a : b;
-        T max = (a.CompareTo(b) > 0) ? a : b;
-        bool isGreater = a.CompareTo(b) > 0;
 
-        Console.WriteLine($"The max of {a} and {b} is {max}. The min of {a} and {b} is {min}.");
-        Console.WriteLine($"{a} is greater than {b}, {isGreater}");
+            // Intitializes an long that multiplies two longs
+            long longMult = 6 * 45;
+            // Intitialized an long that adds longs
+            long longAdd = 55 + 66;
+
+            // Prints the maxium and minimum of the two long variables
+            Console.WriteLine($"The max of {longMult} and {longAdd} is {Math.Max(longMult, longAdd)}." +
+                $"The min of the two is {Math.Min(longMult, longAdd)}");
+
+            // Intitializes boolean to see if longMult is grater than longAdd 
+            bool islongGreater = longMult > longAdd;
+            // Prints if longMult is greater than longAdd
+            Console.WriteLine($"{longMult} is greater than {longAdd}, {islongGreater}.");
+
+
+
+            // Intitializes an float that multiplies two floats
+            float floatMult = 6.5f * 45.24f;
+            // Intitialized an float that adds floats
+            float floatAdd = 55.35f + 66.15f;
+
+            // Prints the maxium and minimum of the two float variables
+            Console.WriteLine($"The max of {floatMult} and {floatAdd} is {Math.Max(floatMult, floatAdd)}." +
+                $"The min of the two is {Math.Min(floatMult, floatAdd)}");
+
+            // Intitializes boolean to see if floatMult is grater than floatAdd 
+            bool isfloatGreater = floatMult > floatAdd;
+            // Prints if floatMult is greater than floatAdd
+            Console.WriteLine($"{floatMult} is greater than {floatAdd}, {isfloatGreater}.");
+
+
+            // Intitializes an double that multiplies two doubles
+            double doubleMult = 6.69 * 45.58;
+            // Intitialized an double that adds doubles
+            double doubleAdd = 55.48 + 66.15;
+
+            // Prints the maxium and minimum of the two double variables
+            Console.WriteLine($"The max of {doubleMult} and {doubleAdd} is {Math.Max(doubleMult, doubleAdd)}." +
+                $"The min of the two is {Math.Min(doubleMult, doubleAdd)}");
+
+            // Intitializes boolean to see if doubleMult is grater than doubleAdd 
+            bool isdoubleGreater = doubleMult > doubleAdd;
+            // Prints if doubleMult is greater than doubleAdd
+            Console.WriteLine($"{doubleMult} is greater than {doubleAdd}, {isdoubleGreater}.");
+
+
+            // Intitializes an decimal that multiplies two decimals
+            decimal decimalMult = (decimal)(6.25 * 45.15);
+            // Intitialized an decimal that adds decimals
+            decimal decimalAdd = (decimal)(55.66 + 66.55);
+
+            // Prints the maxium and minimum of the two decimal variables
+            Console.WriteLine($"The max of {decimalMult} and {decimalAdd} is {Math.Max(decimalMult, decimalAdd)}." +
+                $"The min of the two is {Math.Min(decimalMult, decimalAdd)}");
+
+            // Intitializes boolean to see if decimalMult is grater than decimalAdd 
+            bool isdecimalGreater = decimalMult > decimalAdd;
+            // Prints if decimalMult is greater than decimalAdd
+            Console.WriteLine($"{decimalMult} is greater than {decimalAdd}, {isdecimalGreater}.");
+        }
     }
 }
